@@ -5,11 +5,11 @@
 }
 
 #root {
-  border: 2px yellow solid;
+ 
   width: 100vw;
 }
 
-.app {
+.app-container {
   max-width: 100vw;
   min-height: 90vh;
   border: 2px solid red;
