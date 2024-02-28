@@ -1,10 +1,10 @@
 import {v4 as uuidv4} from  "uuid"
 
 export const initialHeaderObject = {
-    fullName: "John Doe",
-    email: "johndoe@example.com",
+    fullName: "Jerry West",
+    email: "jerrywesdt@example.com",
     phone: "+31 459 789 385",
-    address: "Breda, Netherlands",
+    address: "Carlifonia, USA",
     isOpen: true,
   }
 

@@ -46,10 +46,90 @@ body {
   padding-block-end:50px ;
   
 }
+.nav-bar h1 {
+  font-size: 20px;
+  font-weight: 800;
+}
 
 .app-container {
   max-width: 100vw;
   min-height: 90vh;
   border: 2px solid red;
+  display: flex;
+  flex-direction: column;
 
+}
+
+.main-content-container {
+  display: flex;
+  justify-content: center;
+  border:2px solid yellow;
+}
+
+.main-content-container > * {
+  flex: 1;
+}
+
+form,
+.cv-border-radius-wrapper {
+  border-radius: 10px;
+  border: 1px solid lime;
+}
+
+form {
+  width: 240px;
+  background-color: white;
+  padding: 30px;
+}
+
+.form-section,
+.cv-section {
+  display: flex;
+}
+
+.form-section{
+  gap:30px;
+  flex-direction: column;
+  align-items: center;
+}
+
+legend {
+  font-size: 20px;
+}
+
+.legend-container svg{
+  fill:var(--slate-800);
+}
+
+.legend-container {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+}
+
+.legend-content {
+  display: flex;
+  justify-content: space-evenly;
+  
+}
+
+.legend-fullname-preview,
+.legend-qualification-preview,
+.legend-company-preview {
+  white-space: nowrap;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  color: var(--slate-400);
+}
+
+.legend-fullname-preview {
+  width: 140px;
+}
+/* Drop down menu */
+.header-form .dropdown-menu.open {
+  max-height: 500px;
+  border:1px yellow solid;
+  
 }
