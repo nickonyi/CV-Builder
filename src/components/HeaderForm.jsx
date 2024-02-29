@@ -9,6 +9,13 @@ import ExpandMoreIcon from "../icons/ExpandMoreIcon";
 function HeaderForm(){
     
     const {headerObject,setHeaderObject} = useContext(FormDataContext);
+
+    function toggleDropdown(){
+        setHeaderObject((prevHeader)=> ({
+            ...prevHeader,
+            isOpen:!prevHeader.isOpen
+        }))
+    }
     
    const handleChange = (e)=>{
     const { name, value } = e.target;
@@ -20,9 +27,14 @@ function HeaderForm(){
         setHeaderObject({ fullName: "", email: "", phone: "", address: "", isOpen: true });
         
     }
+
+    const handleSave = (e)=> {
+        e.preventDefault();
+        toggleDropdown();
+    }
     
      const {fullName,email,phone,address,isOpen} = headerObject;
-     console.log(headerObject);
+     
    
     return (
     <form className="header-form">
@@ -90,6 +102,7 @@ function HeaderForm(){
                 </ul>
                 <div className="button-container">
                     <Button className="clear-button" label="Clear" onClick={handleClear}></Button>
+                    <Button className="save-button" label="Save" onClick={handleSave}></Button>
                 </div>
 
             </div>

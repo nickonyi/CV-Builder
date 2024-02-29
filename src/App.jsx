@@ -1,5 +1,4 @@
 import React,{useState,useEffect,createContext,Dispatch,SetStateAction} from 'react'
-import EditSide from './components/editSide'
 import { initialHeaderObject,initialEducationArray,initialExperienceArray } from './intialData'
 import './styles/App.css'
 

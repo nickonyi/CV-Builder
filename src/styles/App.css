@@ -110,7 +110,7 @@ fieldset {
 .legend-container {
     cursor: pointer;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
 }
 
 .legend-content {
@@ -137,10 +137,43 @@ fieldset {
 
 /* Drop down menu */
 
+
+/* Drop down menu */
+
+.dropdown-menu {
+    overflow: hidden;
+    transition: max-height 0.3s;
+    max-height: 0px;
+}
+
 .header-form .dropdown-menu.open {
     max-height: 500px;
 }
 
 .clear-button {
     background-color: red;
+}
+
+textarea {
+    margin: 0 1px;
+    /* Gives space for focus outline */
+    padding: 13px;
+    border-radius: 10px;
+    background-color: var(--slate-50);
+    transition: background-color 0.3s ease;
+}
+
+input {
+    margin: 0 1px;
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--slate-50);
+    transition: background-color 0.3s ease;
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 15px;
 }
