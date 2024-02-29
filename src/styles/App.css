@@ -139,5 +139,8 @@ fieldset {
 
 .header-form .dropdown-menu.open {
     max-height: 500px;
-    border: 1px yellow solid;
+}
+
+.clear-button {
+    background-color: red;
 }
