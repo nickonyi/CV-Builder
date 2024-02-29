@@ -7,14 +7,6 @@ import FormSection from "./components/FormSection";
 import CvSection from "./components/CvSection";
 import ButtonToggleView from "./components/ButtonToggleView";
 
-const initialFormData = {
-  headerObject: {},
-  setHeaderObject: () => {},
-  educationArray: [],
-  setEducationArray: () => {},
-  experienceArray: [],
-  setExperienceArray: () => {}
-};
 
 const FormDataContext = React.createContext();
 

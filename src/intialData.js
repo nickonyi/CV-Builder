@@ -1,4 +1,4 @@
-import {v4 as uuidv4} from  "uuid"
+import { v4 as uuidv4 } from "uuid"
 
 export const initialHeaderObject = {
     fullName: "Jerry West",
@@ -6,56 +6,54 @@ export const initialHeaderObject = {
     phone: "+31 459 789 385",
     address: "Carlifonia, USA",
     isOpen: true,
-  }
+}
 
 
-  export const initialEducationArray = [
-    {
-      id: uuidv4(),
-      school: "University of Barcelona",
-      qualification: "Bachelor of Science in Physics",
-      startDate: "Sept 2016",
-      endDate: "June 2021",
-      location: "Barcelona, Spain",
-      isOpen: false,
+export const initialEducationArray = [{
+        id: uuidv4(),
+        school: "University of Barcelona",
+        qualification: "Bachelor of Science in Physics",
+        startDate: "Sept 2016",
+        endDate: "June 2021",
+        location: "Barcelona, Spain",
+        isOpen: false,
     },
     {
-      id: uuidv4(),
-      school: "Central High School",
-      qualification: "High School Diploma",
-      startDate: "Sept 2012",
-      endDate: "June 2016",
-      location: "Boston, USA",
-      isOpen: false,
+        id: uuidv4(),
+        school: "Central High School",
+        qualification: "High School Diploma",
+        startDate: "Sept 2012",
+        endDate: "June 2016",
+        location: "Boston, USA",
+        isOpen: false,
     },
-  ];
+];
 
 
-  export const initialExperienceArray = [
-    {
-      id: uuidv4(),
-      company: "Acme Corporation",
-      position: "Software Engineer",
-      startDate: "Jan 2023",
-      endDate: "Present",
-      location: "Madrid, Spain",
-      description: `- Worked as a Software Engineer in a dynamic team environment, 
+export const initialExperienceArray = [{
+        id: uuidv4(),
+        company: "Acme Corporation",
+        position: "Software Engineer",
+        startDate: "Jan 2023",
+        endDate: "Present",
+        location: "Madrid, Spain",
+        description: `- Worked as a Software Engineer in a dynamic team environment, 
   implementing innovative solutions for various projects. 
   - Collaborated with cross-functional teams to deliver high-quality software products. 
   - Participated in code reviews and provided constructive feedback.`,
-      isOpen: false,
+        isOpen: false,
     },
     {
-      id: uuidv4(),
-      company: "Tech Solutions Inc",
-      position: "Data Scientist",
-      startDate: "Sept 2021",
-      endDate: "Aug 2022",
-      location: "New York City, USA",
-      description: `- Responsible for analyzing large datasets to extract actionable insights 
+        id: uuidv4(),
+        company: "Tech Solutions Inc",
+        position: "Data Scientist",
+        startDate: "Sept 2021",
+        endDate: "Aug 2022",
+        location: "New York City, USA",
+        description: `- Responsible for analyzing large datasets to extract actionable insights 
   and improve business processes. 
   - Developed machine learning models to predict customer behavior and optimize marketing strategies. 
   - Presented findings to stakeholders and provided recommendations for future initiatives.`,
-      isOpen: false,
+        isOpen: false,
     },
-  ];
+];
