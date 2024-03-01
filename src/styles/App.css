@@ -33,7 +33,6 @@ body {
     letter-spacing: 1px;
     color: var(--slate-800);
     background-color: var(--slate-100);
-    overflow: hidden;
 }
 
 .nav-bar {
@@ -50,8 +49,6 @@ body {
 }
 
 .app-container {
-    max-width: 100vw;
-    min-height: 90vh;
     border: 2px solid red;
     display: flex;
     flex-direction: column;
