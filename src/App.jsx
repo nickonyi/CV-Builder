@@ -15,6 +15,8 @@ export default function App() {
   const [educationArray, setEducationArray] = useState(initialEducationArray);
   const [experienceArray, setExperienceArray] = useState(initialExperienceArray);
   
+  const [showForm,setShowForm] = useState(false);
+  const [isCollapsed,setIsCollapsed]= useState(window.innerWidth <= 1250);
 
   return (
     <div className="app-container">
@@ -32,8 +34,8 @@ export default function App() {
             setExperienceArray
            }}
            >
-           {<FormSection />}
-           {<CvSection />}
+           {(!isCollapsed || showForm) && <FormSection />}
+           {(!isCollapsed || !showForm) && <CvSection />}
            </FormDataContext.Provider>
            
         </div>

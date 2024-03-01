@@ -150,10 +150,6 @@ fieldset {
     max-height: 500px;
 }
 
-.clear-button {
-    background-color: red;
-}
-
 textarea {
     margin: 0 1px;
     /* Gives space for focus outline */
@@ -176,4 +172,30 @@ input {
     display: flex;
     flex-direction: column;
     margin-top: 15px;
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+
+button {
+    border: 1px solid;
+    border-radius: 6px;
+    padding: 12px 20px;
+    font-size: 12px;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+button.delete-button,
+button.clear-button {
+    border-color: var(--slate-300);
+}
+
+button.save-button {
+    border-color: var(--blue);
+    color: white;
+    background-color: var(--blue);
 }

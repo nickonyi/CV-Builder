@@ -1,4 +1,4 @@
-import React,{ useContext,ChangeEvent,FormEvent } from "react"
+import { useContext } from "react"
 import { FormDataContext } from "../App";
 
 import Button from "./Button";
@@ -39,7 +39,7 @@ function HeaderForm(){
     return (
     <form className="header-form">
         <fieldset>
-            <div className="legend-container">
+            <div className="legend-container" onClick={toggleDropdown}>
                 <div className="legend-content">
                     <legend>Header</legend>
                     {isOpen && fullName && (
