@@ -131,6 +131,10 @@ fieldset {
     border: none;
 }
 
+.legend-qualification-preview {
+    width: 63px;
+}
+
 
 /* Drop down menu */
 
@@ -145,6 +149,10 @@ fieldset {
 
 .header-form .dropdown-menu.open {
     max-height: 500px;
+}
+
+.education-form .dropdown-menu.open {
+    max-height: 600px;
 }
 
 textarea {
