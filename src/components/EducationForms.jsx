@@ -9,9 +9,16 @@ import Button from "./Button";
 import ExpandLessIcon from "../icons/ExpandLessIcon";
 import ExpandMoreIcon from "../icons/ExpandMoreIcon";
 
-function EducationForm(){
-  const [educationObject,setEducationArray] = useState(initialEducationArray);
-  const [{id, school, qualification, startDate, endDate, location, isOpen }] = educationObject;
+const EducationFormProps = {
+  educationObject: initialEducationArray, // Define properties of EducationObject here
+  setEducationArray: () => {
+
+  } // Placeholder function
+};
+
+function EducationForm({educationObject,setEducationArray}){
+ 
+  const {id, school, qualification, startDate, endDate, location, isOpen } = educationObject;
   console.log(educationObject);
   
 
