@@ -1,4 +1,4 @@
-import { useContext, ChangeEvent, FormEvent,useState } from "react";
+import { useContext} from "react";
 import { DragDropContext, Droppable, Draggable} from "react-beautiful-dnd";
 import { FormDataContext } from "../App";
 import { initialEducationArray } from "../intialData";

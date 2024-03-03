@@ -7,6 +7,7 @@ import ExperienceForms from "./ExperienceForms";
    <aside className="form-section">
     <HeaderForm />
     <EducationForms />
+    <ExperienceForms />
    </aside>
  )
 }  

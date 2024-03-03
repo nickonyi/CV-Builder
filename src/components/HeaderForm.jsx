@@ -42,7 +42,7 @@ function HeaderForm(){
             <div className="legend-container" onClick={toggleDropdown}>
                 <div className="legend-content">
                     <legend>Header</legend>
-                    {isOpen && fullName && (
+                    {!isOpen && fullName && (
                         <div className="legend-fullname-preview">
                             <span className="legend-dash">-</span>
                             {fullName}

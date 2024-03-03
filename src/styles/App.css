@@ -204,3 +204,7 @@ button.save-button {
     color: white;
     background-color: var(--blue);
 }
+
+.education-form {
+    margin-block: 20px;
+}
