@@ -112,7 +112,7 @@ fieldset {
 
 .legend-content {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
 }
 
 .legend-fullname-preview,
@@ -124,6 +124,7 @@ fieldset {
     align-items: center;
     font-size: 16px;
     color: var(--slate-400);
+    padding-left: 10px;
 }
 
 .legend-fullname-preview {
@@ -132,7 +133,15 @@ fieldset {
 }
 
 .legend-qualification-preview {
-    width: 63px;
+    width: 73px;
+}
+
+.legend-company-preview {
+    width: 50px;
+}
+
+span {
+    margin-right: 5px;
 }
 
 
@@ -206,5 +215,9 @@ button.save-button {
 }
 
 .education-form {
+    margin-block: 20px;
+}
+
+.experience-form {
     margin-block: 20px;
 }
