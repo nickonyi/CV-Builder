@@ -10,16 +10,16 @@ import ExpandLessIcon from "../icons/ExpandLessIcon";
 import ExpandMoreIcon from "../icons/ExpandMoreIcon";
 
 const EducationFormProps = {
-  educationObject: initialEducationArray, // Define properties of EducationObject here
+  educationObject: initialEducationArray,
   setEducationArray: () => {
 
-  } // Placeholder function
+  } 
 };
 
 function EducationForm({educationObject,setEducationArray}){
  
   const {id, school, qualification, startDate, endDate, location, isOpen } = educationObject;
-  console.log(educationObject);
+  
   
 
   function toggleDropdown(){
@@ -137,7 +137,7 @@ function EducationForm({educationObject,setEducationArray}){
 
 function EducationForms (){
     const { educationArray, setEducationArray } = useContext(FormDataContext);
-    console.log(educationArray);
+    
 
     const handleAddNew = () => {
         const newEducationEntry = {
