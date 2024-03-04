@@ -10,7 +10,7 @@ function Cv ({divRef}) {
     
     return (
         <div className="cv" ref={divRef}>
-
+          <HeaderCv />
         </div>
     )
 }

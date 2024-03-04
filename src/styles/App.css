@@ -60,7 +60,9 @@ body {
     border: 2px solid yellow;
 }
 
-.main-content-container>* {
+.form-section,
+.cv-section {
+    display: flex;
     flex: 1;
 }
 
@@ -75,11 +77,6 @@ form {
     background-color: white;
     padding: 30px;
     padding-inline: 30px;
-}
-
-.form-section,
-.cv-section {
-    display: flex;
 }
 
 .form-section {
@@ -226,4 +223,46 @@ button.save-button {
 .experience-form {
     margin-block: 20px;
     padding-inline: 30px;
+}
+
+
+/* Cv section */
+
+.cv {
+    --cv-resize: 1;
+    --cv-width: calc(800px * var(--cv-resize));
+    width: var(--cv-width);
+    height: calc(var(--cv-width) * sqrt(2));
+    background-color: white;
+    overflow: hidden;
+    font-size: calc(14px * var(--cv-resize));
+}
+
+.header-cv {
+    color: white;
+    background-color: rgb(17, 109, 195);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 15%;
+}
+
+.cv h1 {
+    font-size: calc(30px * var(--cv-resize));
+}
+
+.header-cv-contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+}
+
+.header-cv-contact-item {
+    margin: 0 calc(20px * var(--cv-resize));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
 }
