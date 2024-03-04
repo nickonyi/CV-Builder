@@ -15,14 +15,38 @@ const ExperienceFormProps = {
   setExperienceArray:()=> {}
 }
 
+
 function ExperienceForm({experienceObject,setExperienceArray}){
     const { id, company, position, startDate, endDate, location, description, isOpen } =
     experienceObject;
+
+  
 
     const toggleDropDown = ()=> {
         setExperienceArray((prevState) => 
          prevState.map((exp)=> (exp.id === id? {...exp,isOpen:!exp.isOpen}:exp))
         )
+    }
+
+    const handleChange = (e)=> {
+        e.preventDefault();
+        const {name,value} = e.target;
+
+        setExperienceArray((prevState)=>
+        prevState.map((exp)=> (exp.id === id? {...exp,[name]:value}:exp))
+        )
+    }
+
+    const handleDelete = (e)=> {
+        e.preventDefault();
+        setExperienceArray((prevState)=> 
+         prevState.filter((exp) => exp.id !== id)
+        )
+    }
+
+    const handleSave = (e) => {
+       e.preventDefault();
+        toggleDropDown();
     }
      return (
         <form className="experience-form">
@@ -40,6 +64,79 @@ function ExperienceForm({experienceObject,setExperienceArray}){
                         }
                     </div>
                     {isOpen?<ExpandLessIcon/>:<ExpandMoreIcon/>}
+                </div>
+
+                <div className={`dropdown-menu ${isOpen?'open':''}`}>
+                <ul>
+                  <li className="input-container">
+                    <label htmlFor="position">Position</label>
+                    <input
+                      type="text"
+                      id="position"
+                      name="position"
+                      placeholder="Enter the position"
+                      value={position}
+                      onChange={handleChange}
+                      />
+                  </li>
+                  <li className="input-container">
+                    <label htmlFor="company">Company</label>
+                    <input
+                      type="text"
+                      id="company"
+                      name="company"
+                      placeholder="Enter the company name"
+                      value={company}
+                      onChange={handleChange}
+                    />
+                  </li>
+                  <li className="input-container">
+                    <label htmlFor="location">Location</label>
+                    <input
+                      type="text"
+                      id="location"
+                      name="location"
+                      placeholder="Enter the location"
+                      value={location}
+                      onChange={handleChange}
+                    />
+                  </li>
+                  <li className="input-container">
+                    <label htmlFor="startDate">Start Date</label>
+                    <input
+                      type="text"
+                      id="startDate"
+                      name="startDate"
+                      placeholder="Enter the start date"
+                      value={startDate}
+                      onChange={handleChange}
+                    />
+                  </li>
+                  <li className="input-container">
+                    <label htmlFor="endDate">End Date</label>
+                    <input
+                      type="text"
+                      id="endDate"
+                      name="endDate"
+                      placeholder="Enter the end date"
+                      value={endDate}
+                      onChange={handleChange}
+                    />
+                  </li>
+                  <li className="input-container">
+                    <label htmlFor="description">Description</label>
+                    <textarea
+                      id="description"
+                      name="description"
+                      placeholder="Enter a description"
+                      value={description}
+                      onChange={handleChange}></textarea>
+                  </li>
+                </ul>
+                <div className="button-container">
+                    <Button className="clear-button" label={"Delete"} onClick={handleDelete} />
+                    <Button className="save-button" label={"Save"} onClick={handleSave} />
+                </div>
                 </div>
             </fieldset>
         </form>

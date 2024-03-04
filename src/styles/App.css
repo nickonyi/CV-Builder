@@ -71,9 +71,10 @@ form,
 }
 
 form {
-    width: 240px;
+    width: 300px;
     background-color: white;
     padding: 30px;
+    padding-inline: 30px;
 }
 
 .form-section,
@@ -164,6 +165,10 @@ span {
     max-height: 600px;
 }
 
+.experience-form .dropdown-menu.open {
+    max-height: 750px;
+}
+
 textarea {
     margin: 0 1px;
     /* Gives space for focus outline */
@@ -174,7 +179,7 @@ textarea {
 }
 
 input {
-    margin: 0 1px;
+    margin: 5px 1px;
     padding: 5px;
     border: none;
     border-radius: 5px;
@@ -220,4 +225,5 @@ button.save-button {
 
 .experience-form {
     margin-block: 20px;
+    padding-inline: 30px;
 }
