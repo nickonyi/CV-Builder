@@ -1,7 +1,6 @@
 import { useContext} from "react";
 import { DragDropContext, Droppable, Draggable} from "react-beautiful-dnd";
 import { FormDataContext } from "../App";
-import { initialEducationArray } from "../intialData";
 import { v4 as uuidv4 } from "uuid";
 
 
@@ -9,15 +8,10 @@ import Button from "./Button";
 import ExpandLessIcon from "../icons/ExpandLessIcon";
 import ExpandMoreIcon from "../icons/ExpandMoreIcon";
 
-const EducationFormProps = {
-  educationObject: initialEducationArray,
-  setEducationArray: () => {
 
-  } 
-};
 
 function EducationForm({educationObject,setEducationArray}){
- 
+
   const {id, school, qualification, startDate, endDate, location, isOpen } = educationObject;
   
   
