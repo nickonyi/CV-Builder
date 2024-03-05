@@ -7,6 +7,7 @@ import jsPDF from "jspdf"
 
 import HeaderCv from "./HeaderCv";
 import EducationCv from "./EducationCv";
+import ExperienceCv from "./ExperienceCv";
 
 function Cv ({divRef}) {
     
@@ -15,6 +16,8 @@ function Cv ({divRef}) {
           <HeaderCv />
           <div className="body-cv">
             <EducationCv />
+            <ExperienceCv />
+
           </div>
         </div>
     )
