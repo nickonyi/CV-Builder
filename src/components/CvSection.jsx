@@ -17,7 +17,6 @@ function Cv ({divRef}) {
           <div className="body-cv">
             <EducationCv />
             <ExperienceCv />
-
           </div>
         </div>
     )
