@@ -266,3 +266,46 @@ button.save-button {
     justify-content: center;
     gap: 5px;
 }
+
+.header-cv-contact-item svg {
+    width: calc(18px * var(--cv-resize));
+    height: calc(18px * var(--cv-resize));
+    fill: white;
+    margin-right: calc(5px * var(--cv-resize));
+}
+
+.cv-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.cv-container h1,
+.cv-item {
+    margin-bottom: calc(30px * var(--cv-resize));
+}
+
+.cv-item>* {
+    margin: calc(7px * var(--cv-resize)) 0;
+}
+
+.cv-title {
+    font-weight: 700;
+    font-size: 1.25rem;
+}
+
+.cv-location {
+    display: flex;
+    align-items: center;
+}
+
+.cv-date {
+    color: var(--slate-400);
+}
+
+.body-cv {
+    padding: calc(70px * var(--cv-resize));
+}
+
+.education-container {
+    margin-bottom: calc(30px * var(--cv-resize));
+}
