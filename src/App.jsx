@@ -21,7 +21,7 @@ export default function App() {
   return (
     <div className="app-container">
         <div className="nav-bar">
-          <h1>CVCreatorPro 📃</h1>
+          <h1>CV Builder 📃</h1>
         </div>
         <div className="main-content-container">
            <FormDataContext.Provider
