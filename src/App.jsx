@@ -16,11 +16,29 @@ export default function App() {
   const [experienceArray, setExperienceArray] = useState(initialExperienceArray);
   
   const [showForm,setShowForm] = useState(false);
-  const [isCollapsed,setIsCollapsed]= useState(window.innerWidth <= 1250);
+  const [isCollapsed,setIsCollapsed]= useState(window.innerWidth <= 1000);
+
+  useEffect(()=> {
+    const handleResize = () => {
+      setIsCollapsed(window.innerWidth <= 1250);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }
+    ,[]);
+
+  const toggleView = () => {
+    setShowForm(!showForm);
+  };
 
   return (
     <div className="app-container">
         <div className="nav-bar">
+          {isCollapsed && <ButtonToggleView showForm={showForm} toggleView={toggleView}/> }
           <h1>CV Builder 📃</h1>
         </div>
         <div className="main-content-container">
@@ -34,8 +52,8 @@ export default function App() {
             setExperienceArray
            }}
            >
-           {<FormSection />}
-           {(!isCollapsed || !showForm) && <CvSection />}
+            {(!isCollapsed || showForm) && <FormSection />}
+          {(!isCollapsed || !showForm) && <CvSection />}
            </FormDataContext.Provider>
            
         </div>
