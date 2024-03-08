@@ -18,8 +18,7 @@ export default function App() {
   const [showForm,setShowForm] = useState(false);
   const [isCollapsed,setIsCollapsed]= useState(window.innerWidth <= 1250);
 
-  console.log(isCollapsed);
-  console.log(!isCollapsed);
+  
   useEffect(()=> {
     const handleResize = () => {
       setIsCollapsed(window.innerWidth <= 1250);
