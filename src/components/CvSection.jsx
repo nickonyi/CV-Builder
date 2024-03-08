@@ -37,6 +37,7 @@ function Cv ({divRef}) {
     document.body.appendChild(clonedCv);
   
    html2canvas(clonedCv).then((canvas)=> {
+    console.log(canvas);
          
        const imgData = canvas.toDataURL("image/jpeg");
        const pdf = new jsPDF();
