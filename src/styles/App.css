@@ -224,6 +224,7 @@
         font-size: 12px;
         font-weight: 500;
         transition: background-color 0.3s ease;
+        cursor: pointer;
     }
     
     button.delete-button,
@@ -245,6 +246,11 @@
         background-color: var(--slate-100);
         font-weight: 700;
         font-size: 16px;
+    }
+    
+    button.forms-add-new:hover,
+    button.download-button:hover {
+        border: 2px solid var(--slate-700);
     }
     
     button.download-button {
@@ -354,7 +360,7 @@
     }
     
     .cv-date {
-        color: var(--slate-400);
+        color: var(--slate-600);
     }
     
     .body-cv {
@@ -408,7 +414,7 @@
     }
     
     .cv-date {
-        color: var(--slate-400);
+        color: var(--slate-600);
     }
     
     .body-cv {
