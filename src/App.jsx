@@ -16,8 +16,10 @@ export default function App() {
   const [experienceArray, setExperienceArray] = useState(initialExperienceArray);
   
   const [showForm,setShowForm] = useState(false);
-  const [isCollapsed,setIsCollapsed]= useState(window.innerWidth <= 1000);
+  const [isCollapsed,setIsCollapsed]= useState(window.innerWidth <= 1250);
 
+  console.log(isCollapsed);
+  console.log(!isCollapsed);
   useEffect(()=> {
     const handleResize = () => {
       setIsCollapsed(window.innerWidth <= 1250);
@@ -52,8 +54,8 @@ export default function App() {
             setExperienceArray
            }}
            >
-            {(!isCollapsed || showForm) && <FormSection />}
-          {(!isCollapsed || !showForm) && <CvSection />}
+            { (!isCollapsed || showForm )&& <FormSection />}
+            { (!isCollapsed || !showForm) && <CvSection />}
            </FormDataContext.Provider>
            
         </div>
